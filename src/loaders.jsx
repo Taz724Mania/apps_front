@@ -2,7 +2,7 @@ const URL = import.meta.env.VITE_BASE_URL
 console.log(URL)
 
 export const indexLoader = async () => {
-    const response = await fetch(`${URL}`)
+    const response = await fetch(`${URL}/list/`)
     const allLists = await response.json()
     return allLists
 }
