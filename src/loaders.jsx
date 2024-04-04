@@ -14,8 +14,8 @@ export const indexLoader = async () => {
 
 
 export const showLoader = async ({ params }) => {
-
-    const response = await fetch(`${URL}${params.id}`)
+console.log(params)
+    const response = await fetch(`${URL}${params.id}/`)
 
     const aList = await response.json()
 
