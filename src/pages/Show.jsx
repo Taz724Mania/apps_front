@@ -2,7 +2,7 @@ import { Link, useLoaderData, Form, useParams } from "react-router-dom";
 
 export default function Show(props) {
   const aList = useLoaderData();
-  const { id } = useParams(); 
+  const { id } = useParams(); // Get the ID from route parameters
 
   return (
     <div>
@@ -12,9 +12,24 @@ export default function Show(props) {
 
       <div>
         <Form action={`/update/${id}/`} method="POST">
+            <label htmlFor="title">
+                Rename the Appointment
+                <input type="text" id="title" name="title" defaultValue={aList.title}/>
+            </label>
+    
+            <label htmlFor="date">
+                What day is the Appointment?
+                <input type="text" id="date" name="date" defaultValue={aList.date}/>
+            </label>
+            <label htmlFor="time">
+                What time is the Appointment?
+                <input type="text" id="time" name="time" defaultValue={aList.time}/>
+            </label>
+            <button style={{"backgroundColor": "blue"}}>Update your Appointment</button>
         </Form>
 
-        <Form action={`/delete/${id}/`} method="POST">
+        <Form action={`/delete/${id}/`} method="post">
+            <button style={{"backgroundColor": "red"}}>Delete the Appointment</button>
         </Form>
       </div>
 
