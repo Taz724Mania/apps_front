@@ -7,15 +7,15 @@ export default function Index(props) {
     return (
         <>
             <h1>Add an Appointment</h1>
-            <Form>
+            <Form action="/create" method="POST">
                 <label htmlFor="title">
-                    <input type="text" title="title" id="title" />
+                    <input type="text" name="title" id="title" />
                 </label>
                 <label htmlFor="date">
-                    <input type="text" date="date" id="date" />
+                    <input type="text" name="date" id="date" />
                 </label>
                 <label htmlFor="time">
-                    <input type="text" time="time" id="time" />
+                    <input type="text" name="time" id="time" />
                 </label>
                 <button>Add a New Appointment</button>
             </Form>

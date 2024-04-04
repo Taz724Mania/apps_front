@@ -9,7 +9,7 @@ export default function List({ list }) {
             <Link to={`/list/${list.id}`}>
                 <h1>{list.title}</h1>
                 <h2>{list.date}</h2>
-                <h2>{list.time}</h2>
+                <h3>{list.time}</h3>
             </Link>
         </div>
     )
